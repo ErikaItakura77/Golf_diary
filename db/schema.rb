@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190208020548) do
+ActiveRecord::Schema.define(version: 20190208053150) do
+
+  create_table "rounds", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.date     "day"
+    t.string   "course"
+    t.string   "weather"
+    t.string   "wind"
+    t.integer  "green"
+    t.string   "tee"
+    t.integer  "score_first_nine"
+    t.integer  "score_back_nine"
+    t.integer  "score_add"
+    t.string   "member1"
+    t.string   "member2"
+    t.string   "member3"
+    t.string   "member4"
+    t.string   "picture"
+    t.string   "video"
+    t.integer  "user_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["user_id"], name: "index_rounds_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
@@ -20,4 +42,5 @@ ActiveRecord::Schema.define(version: 20190208020548) do
     t.datetime "updated_at",      null: false
   end
 
+  add_foreign_key "rounds", "users"
 end
