@@ -9,6 +9,7 @@
         <th>ゴルフ場</th>
         <th>前半スコア</th>
         <th>後半スコア</th>
+        <th>ラウンド詳細</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
           <td><%= round.course %></td>
           <td><%= round.score_first_nine %></td>
           <td><%= round.score_back_nine %></td>
+          <td><%= link_to "詳細ページ", round_path(round), class: 'btn btn-success btn-xs' %></td>
         </tr>
       <% end %>
     </tbody>

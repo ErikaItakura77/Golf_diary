@@ -25,7 +25,7 @@ class RoundsController < ApplicationController
   end
   
   def show
-    @round = current_user.rounds.find(params[:id])
+    @round = current_user.feed_rounds.find(params[:id])
   end
 
   def edit
