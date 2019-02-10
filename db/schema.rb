@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190208134142) do
+ActiveRecord::Schema.define(version: 20190210114851) do
 
   create_table "relationships", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -41,6 +41,9 @@ ActiveRecord::Schema.define(version: 20190208134142) do
     t.integer  "user_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "putt_first_nine"
+    t.integer  "putt_back_nine"
+    t.integer  "add_nine"
     t.index ["user_id"], name: "index_rounds_on_user_id", using: :btree
   end
 

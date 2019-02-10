@@ -1,5 +1,5 @@
     <%= form_for(@round) do |f| %>
-    <%= render 'layouts/error_messages', model: f.object %>
+        <%= render 'layouts/error_messages', model: f.object %>
       	<div class="form-group">
       		<label class="col-sm-2 control-label" for="InputCourse">ゴルフ場<span class="label label-danger">必須</span></label>
       		<div class="col-sm-10">
@@ -29,9 +29,9 @@
       	</div>
       	
       	<div class="form-group">
-      		<label class="col-sm-2 control-label" for="InputGreen">グリーン</label>
+      		<label class="col-sm-2 control-label" for="InputGreen">グリーンの速さ</label>
       		<div class="col-sm-10">
-      			<%= f.number_field :green, class: 'form-control', placeholder: 'グリーン（例：10.5）' %>
+      			<%= f.number_field :green, class: 'form-control', placeholder: 'グリーンの速さ（例：10）' %>
       		</div>
       	</div>
       	
@@ -52,7 +52,7 @@
       	<div class="form-group">
       		<label class="col-sm-2 control-label" for="InputPicture">前半パット数</label>
       		<div class="col-sm-10">
-      			<%= f.text_field :picture, class: 'form-control', placeholder: '前半パット数' %>
+      			<%= f.number_field :putt_first_nine, class: 'form-control', placeholder: '前半パット数' %>
       		</div>
       	</div>
       	
@@ -66,7 +66,7 @@
       	<div class="form-group">
       		<label class="col-sm-2 control-label" for="InputVideo">後半パット数</label>
       		<div class="col-sm-10">
-      			<%= f.text_field :video, class: 'form-control', placeholder: '後半パット数' %>
+      			<%= f.number_field :putt_back_nine, class: 'form-control', placeholder: '後半パット数' %>
       		</div>
       	</div>
       	
@@ -76,7 +76,13 @@
       			<%= f.number_field :score_add, class: 'form-control', placeholder: '追加スコア' %>
       		</div>
       	</div>
-      	
+
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputAdd_nine">追加のパット数</label>
+      		<div class="col-sm-10">
+      			<%= f.number_field :add_nine, class: 'form-control', placeholder: '追加スコアのパット数' %>
+      		</div>
+      	</div>
       	
       	<div class="form-group">
       		<label class="col-sm-2 control-label" for="InputMember">同伴者</label>
@@ -87,8 +93,5 @@
       			<%= f.text_field :member4, class: 'form-control', placeholder: '同伴者４' %>
       		</div>
       	</div>
-      	
-      
-      	
       	<%= f.submit '登録', class: 'btn btn-primary btn-lg' %>
     <% end %>

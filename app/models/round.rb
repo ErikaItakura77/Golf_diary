@@ -16,4 +16,7 @@ class Round < ApplicationRecord
   validates :member4, length: { maximum: 30 }
   validates :picture, length: { maximum: 30 }
   validates :video, length: { maximum: 30 }
+  validates :putt_first_nine, length: { maximum: 10 }
+  validates :putt_back_nine, length: { maximum: 10 }
+  validates :add_nine, length: { maximum: 10 }
 end

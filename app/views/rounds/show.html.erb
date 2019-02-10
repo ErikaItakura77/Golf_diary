@@ -30,23 +30,26 @@
     <td><%= @round.score_first_nine %></td>
   </tr>
   <tr>
+  <tr>
+    <th>前半パット数</th>
+    <td><%= @round.putt_first_nine %></td>
+  </tr>
+  <tr>
     <th>後半スコア</th>
     <td><%= @round.score_back_nine %></td>
   </tr>
   <tr>
-    <th>前半パット数</th>
-    <td><%= @round.picture %></td>
-  </tr>
-  <tr>
     <th>後半パット数</th>
-    <td><%= @round.video %></td>
+    <td><%= @round.putt_back_nine %></td>
   </tr>
-  
   <tr>
     <th>追加スコア</th>
     <td><%= @round.score_add %></td>
   </tr>
-  
+  <tr>
+    <th>追加スコアのパット数</th>
+    <td><%= @round.add_nine %></td>
+  </tr>
   <tr>
     <th>同伴者1</th>
     <td><%= @round.member1 %></td>

@@ -54,7 +54,7 @@ class RoundsController < ApplicationController
   private
 
   def round_params
-    params.require(:round).permit(:day, :course, :weather, :wind, :green, :tee, :score_first_nine, :score_back_nine, :score_add, :member1, :member2, :member3, :member4)
+    params.require(:round).permit(:day, :course, :weather, :wind, :green, :tee, :score_first_nine, :score_back_nine, :score_add, :member1, :member2, :member3, :member4, :putt_first_nine, :putt_back_nine, :add_nine)
   end
   
   def correct_user
