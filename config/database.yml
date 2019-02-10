@@ -52,3 +52,11 @@ production:
   database: golf-diary_production
   username: golf-diary
   password: <%= ENV['GOLF-DIARY_DATABASE_PASSWORD'] %>
+  
+  production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: message-board_production
+  username: message-board
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
