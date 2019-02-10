@@ -16,6 +16,6 @@ Rails.application.routes.draw do
     end
  end
  
- resources :rounds, only: [:create, :destroy]
+ resources :rounds
  resources :relationships, only: [:create, :destroy]
 end

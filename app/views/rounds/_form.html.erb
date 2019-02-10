@@ -1,0 +1,94 @@
+    <%= form_for(@round) do |f| %>
+    <%= render 'layouts/error_messages', model: f.object %>
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputCourse">ゴルフ場<span class="label label-danger">必須</span></label>
+      		<div class="col-sm-10">
+      		  <%= f.text_field :course, class: 'form-control', placeholder: 'ゴルフ場' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputDay">ラウンド日<span class="label label-danger">必須</span></label>
+      		<div class="col-sm-10">
+      			<%= f.date_field :day, class: 'form-control', placeholder: 'ラウンド日' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputWeather">天気</label>
+      		<div class="col-sm-10">
+      			<%= f.text_field :weather, class: 'form-control', placeholder: '天気' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputWind">風</label>
+      		<div class="col-sm-10">
+      			<%= f.text_field :wind, class: 'form-control', placeholder: '風' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputGreen">グリーン</label>
+      		<div class="col-sm-10">
+      			<%= f.number_field :green, class: 'form-control', placeholder: 'グリーン（例：10.5）' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputTee">使用ティー</label>
+      		<div class="col-sm-10">
+      			<%= f.text_field :tee, class: 'form-control', placeholder: '使用ティー' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputScore_first_nine">前半スコア<span class="label label-danger">必須</span></label>
+      		<div class="col-sm-10">
+      			<%= f.number_field :score_first_nine, class: 'form-control', placeholder: '前半スコア（例：45）' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputPicture">前半パット数</label>
+      		<div class="col-sm-10">
+      			<%= f.text_field :picture, class: 'form-control', placeholder: '前半パット数' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputScore_back_nine">後半スコア<span class="label label-danger">必須</span></label>
+      		<div class="col-sm-10">
+      			<%= f.number_field :score_back_nine, class: 'form-control', placeholder: '後半スコア（例：45）' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputVideo">後半パット数</label>
+      		<div class="col-sm-10">
+      			<%= f.text_field :video, class: 'form-control', placeholder: '後半パット数' %>
+      		</div>
+      	</div>
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputScore_add">追加スコア</label>
+      		<div class="col-sm-10">
+      			<%= f.number_field :score_add, class: 'form-control', placeholder: '追加スコア' %>
+      		</div>
+      	</div>
+      	
+      	
+      	<div class="form-group">
+      		<label class="col-sm-2 control-label" for="InputMember">同伴者</label>
+      		<div class="col-sm-10">
+      			<%= f.text_field :member1, class: 'form-control', placeholder: '同伴者１' %>
+      			<%= f.text_field :member2, class: 'form-control', placeholder: '同伴者２' %>
+      			<%= f.text_field :member3, class: 'form-control', placeholder: '同伴者３' %>
+      			<%= f.text_field :member4, class: 'form-control', placeholder: '同伴者４' %>
+      		</div>
+      	</div>
+      	
+      
+      	
+      	<%= f.submit '登録', class: 'btn btn-primary btn-lg' %>
+    <% end %>

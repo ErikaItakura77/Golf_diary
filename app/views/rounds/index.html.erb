@@ -1,0 +1,29 @@
+<h1>ラウンド一覧</h1>
+
+<% if @rounds.any? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ユーザー名</th>
+        <th>日付</th>
+        <th>ゴルフ場</th>
+        <th>前半スコア</th>
+        <th>後半スコア</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @rounds.each do |round| %>
+        <tr>
+          <td><%= round.user.name %></td>
+          <td><%= round.day %></td>
+          <td><%= round.course %></td>
+          <td><%= round.score_first_nine %></td>
+          <td><%= round.score_back_nine %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div>
+    <%= paginate @rounds %>
+  </div>
+<% end %>

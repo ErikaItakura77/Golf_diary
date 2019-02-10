@@ -6,28 +6,15 @@
       </div>
       <div class="media-body">
         <div>
-          <%= link_to round.user.name, user_path(round.user) %> <span class="text-muted">posted at <%= round.created_at %></span>
+          <%= link_to round.user.name, user_path(round.user) %>
         </div>
         <div>
-          <p><%= round.day %></p>
-          <p><%= round.course %></p>
-          <p><%= round.weather %></p>
-          <p><%= round.wind %></p>
-          <p><%= round.green %></p>
-          <p><%= round.tee %></p>
-          <p><%= round.score_first_nine %></p>
-          <p><%= round.score_back_nine %></p>
-          <p><%= round.score_add %></p>
-          <p><%= round.member1 %></p>
-          <p><%= round.member2 %></p>
-          <p><%= round.member3 %></p>
-          <p><%= round.member4 %></p>
-          <p><%= round.picture %></p>
-          <p><%= round.video %></p>
+          <p>日付：<%= round.day %></p>
+          <p>ゴルフ場：<%= round.course %></p>
         </div>
       </div>
           <% if current_user == round.user %>
-            <%= link_to "Delete", round, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+            <%= link_to "詳細ページ", round_path(round), class: 'btn btn-success btn-xs' %>
           <% end %>
     </li>
   <% end %>

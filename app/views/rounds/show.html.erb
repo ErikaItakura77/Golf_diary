@@ -1,0 +1,69 @@
+<h1> ラウンド詳細ページ</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>コース</th>
+    <td><%= @round.course %></td>
+  </tr>
+  <tr>
+    <th>日付</th>
+    <td><%= @round.day %></td>
+  </tr>
+  <tr>
+    <th>天気</th>
+    <td><%= @round.weather %></td>
+  </tr>
+  <tr>
+    <th>風</th>
+    <td><%= @round.wind %></td>
+  </tr>
+  <tr>
+    <th>グリーン</th>
+    <td><%= @round.green %></td>
+  </tr>
+  <tr>
+    <th>使用ティー</th>
+    <td><%= @round.tee %></td>
+  </tr>
+  <tr>
+    <th>前半スコア</th>
+    <td><%= @round.score_first_nine %></td>
+  </tr>
+  <tr>
+    <th>後半スコア</th>
+    <td><%= @round.score_back_nine %></td>
+  </tr>
+  <tr>
+    <th>前半パット数</th>
+    <td><%= @round.picture %></td>
+  </tr>
+  <tr>
+    <th>後半パット数</th>
+    <td><%= @round.video %></td>
+  </tr>
+  
+  <tr>
+    <th>追加スコア</th>
+    <td><%= @round.score_add %></td>
+  </tr>
+  
+  <tr>
+    <th>同伴者1</th>
+    <td><%= @round.member1 %></td>
+  </tr>
+  <tr>
+    <th>同伴者2</th>
+    <td><%= @round.member2 %></td>
+  </tr>
+  <tr>
+    <th>同伴者3</th>
+    <td><%= @round.member3 %></td>
+  </tr>
+  <tr>
+    <th>同伴者4</th>
+    <td><%= @round.member4 %></td>
+  </tr>
+</table>
+
+<%= link_to 'このラウンド情報を編集する', edit_round_path(@round) %>
+<%= link_to 'このラウンド情報を削除する', @round, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %>

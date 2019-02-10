@@ -2,9 +2,9 @@ class Round < ApplicationRecord
   belongs_to :user
   
   validates :day, presence: true, length: { maximum: 10 }
-  validates :cource, presence: true, length: { maximum: 50 }
+  validates :course, presence: true, length: { maximum: 50 }
   validates :weather, length: { maximum: 10 } 
-  validates :wind, presence: true, length: { maximum: 10 }
+  validates :wind, length: { maximum: 10 }
   validates :green, length: { maximum: 10 }
   validates :tee, length: { maximum: 50 }
   validates :score_first_nine, presence: true, length: { maximum: 10 }
